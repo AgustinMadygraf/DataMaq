@@ -3,7 +3,7 @@ import pymysql
 from logs.config_logger import configurar_logging
 import functools
 import os
-from db_initializer import create_database
+from db_initializer import create_database,create_tables
 
 logger = configurar_logging()
 
@@ -74,6 +74,7 @@ def execute_query(connection, query, params):
     if not connection:
         logger.error("No hay una conexión activa a la base de datos.")
         return False
+    check_table_exists(connection)
 
     try:
         with connection.cursor() as cursor:
@@ -114,6 +115,30 @@ def reconnect_on_failure(func):
                 logger.error(f"No se pudo reconectar a la base de datos: {e}")
                 return None
     return wrapper_reconnect
+
+def check_table_exists(connection):
+    """
+    Verifica si la tabla 'registros_modbus' existe en la base de datos 'novus'.
+
+    Args:
+        connection (pymysql.connections.Connection): La conexión activa a la base de datos.
+
+    Returns:
+        bool: True si la tabla existe, False en caso contrario.
+    """
+    with connection.cursor() as cursor:
+        cursor.execute("""
+            SELECT COUNT(*)
+            FROM information_schema.tables
+            WHERE table_schema = 'novus' AND table_name = 'registros_modbus'
+        """)
+        result = cursor.fetchone()
+        if result[0]:
+            return True
+        else:
+            logger.error("La tabla 'registros_modbus' no existe en la base de datos.")
+            create_tables(cursor,tabla='registros_modbus')
+            return False
 
 
 @reconnect_on_failure

@@ -16,10 +16,16 @@ def create_database():
     cursor.execute("CREATE DATABASE IF NOT EXISTS novus")
     logger.info("base de datos 'novus' creada con éxito")
 
-def create_tables(cursor):
-    with open('database/novus.sql', 'r') as file:
-        sql_script = file.read()
-    cursor.execute(sql_script)
+def create_tables(cursor, tabla):
+    if tabla == 'registros_modbus':
+        with open('database/registros_modbus.sql', 'r') as file:
+            print("creando tabla registros_modbus")
+            sql_script = file.read()
+            print(f"\sql_script:\n  {sql_script} \n")
+            input("Presione enter para continuar")
+            #cursor.execute(sql_script) #fix
+            logger.info("Tabla 'registros_modbus' creada con éxito")
+
 
 def initialize_db():
     connection = mysql.connector.connect(
