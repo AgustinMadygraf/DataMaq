@@ -18,13 +18,20 @@ def create_database():
 
 def create_tables(cursor, tabla):
     if tabla == 'registros_modbus':
-        with open('database/registros_modbus.sql', 'r') as file:
+        with open('database/registros_modbus_1.sql', 'r') as file:
             print("creando tabla registros_modbus")
-            sql_script = file.read()
-            print(f"\sql_script:\n  {sql_script} \n")
+            sql_script1 = file.read()
+            print(f"\sql_script:\n  {sql_script1} \n")
             input("Presione enter para continuar")
-            #cursor.execute(sql_script) #fix
+            cursor.execute(sql_script1) #fix
             logger.info("Tabla 'registros_modbus' creada con éxito")
+        with open('database/registros_modbus_2.sql', 'r') as file:
+            print("Insertando registros en tabla registros_modbus")
+            sql_script2 = file.read()
+            print(f"\sql_script:\n  {sql_script2} \n")
+            input("Presione enter para continuar")
+            cursor.execute(sql_script2) #fix
+            logger.info("registros insertados en 'registros_modbus' con éxito")            
 
 
 def initialize_db():
