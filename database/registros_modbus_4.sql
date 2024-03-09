@@ -1,0 +1,74 @@
+--
+-- Volcado de datos para la tabla `registros_modbus`
+--
+
+INSERT INTO `registros_modbus` (`ID`, `direccion_modbus`, `registro`, `descripcion`, `rw`, `acceso`, `valor`) VALUES
+
+
+(125, 508, 'HR_DO1_STATE_TO_FORCE', 'Valor al forzar la salida K1/R1.', 'R/W', '16 bits', NULL),
+(126, 509, 'HR_DO1_FORCE_STATE', 'Permite forzar la salida K1/R1.', 'R/W', '16 bits', NULL),
+(127, 510, 'HR_DO2_STATE_TO_FORCE', 'Valor al forzar la salida K2/R2.', 'R/W', '16 bits', NULL),
+(128, 511, 'HR_DO2_FORCE_STATE', 'Permite forzar la salida K2/R2.', 'R/W', '16 bits', NULL),
+(129, 512, 'HR_DO3_STATE_TO_FORCE', 'Valor al forzar la salida K3/R3.', 'R/W', '16 bits', NULL),
+(130, 513, 'HR_DO3_FORCE_STATE', 'Permite forzar la salida K3/R3.', 'R/W', '16 bits', NULL),
+(131, 514, 'HR_DO4_STATE_TO_FORCE', 'Valor al forzar la salida K4/R4.', 'R/W', '16 bits', NULL),
+(132, 515, 'HR_DO4_FORCE_STATE', 'Permite forzar la salida K4/R4.', 'R/W', '16 bits', NULL),
+(133, 516, 'HR_DO5_STATE_TO_FORCE', 'Valor al forzar la salida K5.', 'R/W', '16 bits', NULL),
+(134, 517, 'HR_DO5_FORCE_STATE', 'Permite forzar la salida K5.', 'R/W', '16 bits', NULL),
+(135, 518, 'HR_DO6_STATE_TO_FORCE', 'Valor al forzar la salida K6.', 'R/W', '16 bits', NULL),
+(136, 519, 'HR_DO6_FORCE_STATE', 'Permite forzar la salida K6.', 'R/W', '16 bits', NULL),
+(137, 520, 'HR_DO7_STATE_TO_FORCE', 'Valor al forzar la salida K7.', 'R/W', '16 bits', NULL),
+(138, 521, 'HR_DO7_FORCE_STATE', 'Permite forzar la salida K7.', 'R/W', '16 bits', NULL),
+(139, 522, 'HR_DO8_STATE_TO_FORCE', 'Valor al forzar la salida K8.', 'R/W', '16 bits', NULL),
+(140, 523, 'HR_DO8_FORCE_STATE', 'Permite forzar la salida K8.', 'R/W', '16 bits', NULL),
+(141, 524, 'HR_AO1_VALUE', 'Registro de manipulación de valores aplicados por la salida O1.', 'R/W', '16 bits', NULL),
+(142, 525, 'HR_AO2_VALUE', 'Registro de manipulación de valores aplicados por la salida O2.', 'R/W', '16 bits', NULL),
+(143, 526, 'HR_AO1_VALUE_TO_FORCE', 'Valor al forzar la salida O1.', 'R/W', '16 bits', NULL),
+(144, 527, 'HR_AO1_FORCE_VALUE', 'Permite forzar la salida O1.', 'R/W', '16 bits', NULL),
+(145, 528, 'HR_AO2_VALUE_TO_FORCE', 'Valor al forzar la salida O2.', 'R/W', '16 bits', NULL),
+(146, 529, 'HR_AO2_FORCE_VALUE', 'Permite forzar la salida O2.', 'R/W', '16 bits', NULL),
+(147, 530, 'HR_DOALL_VALUE', 'Registro de manejo concatenado sobre el estado de todas las salidas digitales y de relé (Kn/Rn).', 'R/W', '16 bits', NULL),
+(148, 1530, 'HR_DI1_FORCE_LO', 'Valor al forzar la entrada D1.', 'R/W', '16 bits', NULL),
+(149, 1531, 'HR_DI1_FORCE_HI', 'Valor al forzar la entrada D1.', 'R/W', '16 bits', NULL),
+(150, 1533, 'HR_DI1_FORCE', 'Permite forzar la entrada D1.', 'R/W', '16 bits', NULL),
+(151, 1580, 'HR_DI2_FORCE_LO', 'Valor al forzar la entrada D2.', 'R/W', '16 bits', NULL),
+(152, 1581, 'HR_DI2_FORCE_HI', 'Valor al forzar la entrada D2.', 'R/W', '16 bits', NULL),
+(153, 1583, 'HR_DI2_FORCE', 'Permite forzar la entrada D2.', 'R/W', '16 bits', NULL),
+(154, 1630, 'HR_DI3_FORCE_LO', 'Valor al forzar la entrada D3.', 'R/W', '16 bits', NULL),
+(155, 1631, 'HR_DI3_FORCE_HI', 'Valor al forzar la entrada D3.', 'R/W', '16 bits', NULL),
+(156, 1633, 'HR_DI3_FORCE', 'Permite forzar la entrada D3.', 'R/W', '16 bits', NULL),
+(157, 1680, 'HR_DI4_FORCE_LO', 'Valor al forzar la entrada D4.', 'R/W', '16 bits', NULL),
+(158, 1681, 'HR_DI4_FORCE_HI', 'Valor al forzar la entrada D4.', 'R/W', '16 bits', NULL),
+(159, 1683, 'HR_DI4_FORCE', 'Permite forzar la entrada D4.', 'R/W', '16 bits', NULL),
+(160, 1730, 'HR_DI5_FORCE_LO', 'Valor al forzar la entrada D5.', 'R/W', '16 bits', NULL),
+(161, 1731, 'HR_DI5_FORCE_HI', 'Valor al forzar la entrada D5.', 'R/W', '16 bits', NULL),
+(162, 1733, 'HR_DI5_FORCE', 'Permite forzar la entrada D5.', 'R/W', '16 bits', NULL),
+(163, 1780, 'HR_DI6_FORCE_LO', 'Valor al forzar la entrada D6.', 'R/W', '16 bits', NULL),
+(164, 1781, 'HR_DI6_FORCE_HI', 'Valor al forzar la entrada D6.', 'R/W', '16 bits', NULL),
+(165, 1783, 'HR_DI6_FORCE', 'Permite forzar la entrada D6.', 'R/W', '16 bits', NULL),
+(166, 1830, 'HR_DI7_FORCE_LO', 'Valor al forzar la entrada D7.', 'R/W', '16 bits', NULL),
+(167, 1831, 'HR_DI7_FORCE_HI', 'Valor al forzar la entrada D7.', 'R/W', '16 bits', NULL),
+(168, 1833, 'HR_DI7_FORCE', 'Permite forzar la entrada D7.', 'R/W', '16 bits', NULL),
+(169, 1880, 'HR_DI8_FORCE_LO', 'Valor al forzar la entrada D8.', 'R/W', '16 bits', NULL),
+(170, 1881, 'HR_DI8_FORCE_HI', 'Valor al forzar la entrada D8.', 'R/W', '16 bits', NULL),
+(171, 1883, 'HR_DI8_FORCE', 'Permite forzar la entrada D8.', 'R/W', '16 bits', NULL),
+(172, 2333, 'HR_AI1_FORCE_VALUE', 'Permite forzar la entrada A1.', 'R/W', '16 bits', NULL),
+(173, 2334, 'HR_AI1_FORCED_LO', 'Valor al forzar la entrada A1 (32 bits).', 'R/W', '16 bits', NULL),
+(174, 2335, 'HR_AI1_FORCED_HI', 'Valor al forzar la entrada A1 (32 bits).', 'R/W', '16 bits', NULL),
+(175, 2383, 'HR_AI2_FORCE_VALUE', 'Permite forzar la entrada A2.', 'R/W', '16 bits', NULL),
+(176, 2384, 'HR_AI2_FORCED_LO', 'Valor al forzar la entrada A2 (32 bits).', 'R/W', '16 bits', NULL),
+(177, 2385, 'HR_AI2_FORCED_HI', 'Valor al forzar la entrada A2 (32 bits).', 'R/W', '16 bits', NULL);
+
+
+
+--
+-- Indices de la tabla `registros_modbus`
+--
+--ALTER TABLE `registros_modbus`
+--  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT de la tabla `registros_modbus`
+--
+--ALTER TABLE `registros_modbus`
+--  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=178;
