@@ -60,15 +60,3 @@ INSERT INTO `registros_modbus` (`ID`, `direccion_modbus`, `registro`, `descripci
 (177, 2385, 'HR_AI2_FORCED_HI', 'Valor al forzar la entrada A2 (32 bits).', 'R/W', '16 bits', NULL);
 
 
-
---
--- Indices de la tabla `registros_modbus`
---
---ALTER TABLE `registros_modbus`
---  ADD PRIMARY KEY (`ID`);
-
---
--- AUTO_INCREMENT de la tabla `registros_modbus`
---
---ALTER TABLE `registros_modbus`
---  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=178;

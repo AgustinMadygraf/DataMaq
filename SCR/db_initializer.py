@@ -30,6 +30,19 @@ def create_tables(cursor, tabla):
             print(f"\sql_script:\n  {sql_script2} \n")
             cursor.execute(sql_script2) #fix
             logger.info("registros insertados en 'registros_modbus' con éxito")   
+        with open('database/registros_modbus_3.sql', 'r') as file:
+            print("Insertando registros en tabla registros_modbus")
+            sql_script3 = file.read()
+            print(f"\sql_script:\n  {sql_script3} \n")
+            cursor.execute(sql_script3) #fix
+            logger.info("registros insertados en 'registros_modbus' con éxito")  
+        with open('database/registros_modbus_4.sql', 'r') as file:
+            print("Insertando registros en tabla registros_modbus")
+            sql_script4 = file.read()
+            print(f"\sql_script:\n  {sql_script4} \n")
+            cursor.execute(sql_script4) #fix
+            logger.info("registros insertados en 'registros_modbus' con éxito")  
+
 
 
 def initialize_db():
