@@ -8,7 +8,7 @@ $segundos = 60; // Refrescar cada 60 segundos
 
 // Variable que registra qué período de tiempo mostrar por defecto
 $periodo = 'semana';
-$ls_periodos = ['semana' => 604800, 'turno' => 28800, 'hora' => 7200];
+$ls_periodos = ['semana' => 15552000, 'turno' => 7776000, 'hora' => 2592000];
 $ls_class = ['semana' => [1, 0, 0], 'turno' => [0, 1, 0], 'hora' => [0, 0, 1]];
 $ref_class = ['presione', 'presado'];
 $menos_periodo = ['semana' => 'turno', 'turno' => 'hora', 'hora' => 'hora'];
@@ -22,7 +22,7 @@ if ($_GET && array_key_exists("periodo", $_GET)) {
 $class = $ls_class[$periodo];
 
 function sql_query($campo) {
-    return "SELECT `unixtime`, `$campo` FROM `intervalproduction`  ORDER BY `unixtime` DESC LIMIT 1";
+    return "SELECT `unixtime`, `$campo` FROM `intervalproduction_d`  ORDER BY `unixtime` DESC LIMIT 1";
 }
 
 $res = getArraySQL(sql_query("HR_COUNTER1"));
@@ -55,7 +55,7 @@ if ($_GET && array_key_exists("conta", $_GET)) {
 
 $tiempo1 = ($conta/1000) - $ls_periodos[$periodo] - 80*60;
 $tiempo2 = $conta/1000 ;
-$sql = "SELECT `unixtime`, `HR_COUNTER1`, `HR_COUNTER2`  from `intervalproduction` WHERE  unixtime > " . $tiempo1 . " AND unixtime <= " . $tiempo2 . " ORDER BY `unixtime` ASC ;";
+$sql = "SELECT `unixtime`, `HR_COUNTER1`, `HR_COUNTER2`  from `intervalproduction_d` WHERE  unixtime > " . $tiempo1 . " AND unixtime <= " . $tiempo2 . " ORDER BY `unixtime` ASC ;";
 $rawdata = getArraySQL($sql);
 
 

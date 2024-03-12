@@ -11,7 +11,7 @@ logger = configurar_logging()
 
 def crear_acceso_directo(ruta_archivo_bat, directorio_script):
     escritorio = winshell.desktop()
-    ruta_acceso_directo = os.path.join(escritorio, "DigiRail.lnk")
+    ruta_acceso_directo = os.path.join(escritorio, "DataMaq.lnk")
     ruta_icono = os.path.join(directorio_script, "SCR","config", "logo.ico")
 
     if not os.path.isfile(ruta_icono):
@@ -38,9 +38,9 @@ def main():
     logger.info("Iniciando instalador")
 
     #instalar_dependencias(directorio_script)
-    ruta_archivo_bat = os.path.join(directorio_script, 'DigiRail.bat')
+    ruta_archivo_bat = os.path.join(directorio_script, 'DataMaq.bat')
     if not os.path.isfile(ruta_archivo_bat):
-        logger.info(f"Creando archivo 'DigiRail.bat'")
+        logger.info(f"Creando archivo 'DataMaq.bat'")
         crear_archivo_bat(directorio_script, sys.executable)
     
     crear_acceso_directo(ruta_archivo_bat, directorio_script)
@@ -63,7 +63,7 @@ def instalar_dependencias(directorio_script):
 
 def crear_archivo_bat(directorio_script, python_executable):
     ruta_main_py = os.path.join(directorio_script, 'SCR', 'main.py')
-    ruta_archivo_bat = os.path.join(directorio_script, 'DigiRail.bat')
+    ruta_archivo_bat = os.path.join(directorio_script, 'DataMaq.bat')
 
     contenido_bat = (
         "@echo off\n"
@@ -79,7 +79,7 @@ def crear_archivo_bat(directorio_script, python_executable):
 
     with open(ruta_archivo_bat, 'w') as archivo_bat:
         archivo_bat.write(contenido_bat)
-    logger.info("Archivo 'DigiRail.bat' creado exitosamente.")
+    logger.info("Archivo 'DataMaq.bat' creado exitosamente.")
 
 def limpieza_pantalla():
     try:
