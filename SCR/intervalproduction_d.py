@@ -4,7 +4,7 @@ import datetime
 from db_operations import check_db_connection, execute_query
 
 # Ruta al archivo CSV
-csv_file_path = r'C:\AppServ\www\DigiRail\database\intervalproduction_d.csv'
+csv_file_path = r'C:\AppServ\www\DataMaq\database\intervalproduction_d.csv'
 
 def excel_date_to_unix(date_serial, excel_epoch=datetime.datetime(1899, 12, 30)):
     """
