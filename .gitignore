@@ -2,5 +2,6 @@ SCR/__pycache__/
 SCR/logs/sistema.log
 SCR/logs/__pycache__
 SCR/config/__pycache__/
-DataMaq.bat
+DataMaq_main.bat
+DataMaq_dev.bat
 DOCS/00-Prompt-for-ProjectAnalysis.md
