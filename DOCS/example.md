@@ -19,7 +19,7 @@ Considera el monitoreo de un motor esencial en tu línea de producción. Al empl
 - Identificar variaciones en la velocidad que señalen necesidad de mantenimiento preventivo.
 - Estimar el tiempo total de operación al comparar los datos de revolución a lo largo del tiempo.
 
-![Ejemplo de Monitoreo](https://github.com/AgustinMadygraf/DigiRail/blob/main/SCR/config/img1.jpg)
+![Ejemplo de Monitoreo](https://github.com/AgustinMadygraf/DigiRail/blob/main/src/config/img1.jpg)
 
 ## Medición de Presión y Temperatura
 

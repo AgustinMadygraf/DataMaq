@@ -2,7 +2,7 @@
 
 _El futuro del monitoreo y control de la producción industrial está aquí. Descubre DigiRail, donde la precisión se encuentra con la innovación._
 
-![DigiRail Logo](https://github.com/AgustinMadygraf/DigiRail/blob/main/SCR/config/logo.ico)
+![DigiRail Logo](https://github.com/AgustinMadygraf/DigiRail/blob/main/src/config/logo.ico)
 
 ## 🚀 Introducción
 

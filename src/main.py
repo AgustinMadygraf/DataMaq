@@ -1,4 +1,4 @@
-#SCR/main.py
+#src/main.py
 from db_operations import check_db_connection, update_database
 from controller import read_digital_input, inicializar_conexion_modbus, ModbusConnectionError, process_high_resolution_register, limpiar_pantalla
 from logs.config_logger import configurar_logging
